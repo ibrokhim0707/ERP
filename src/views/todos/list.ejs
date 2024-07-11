@@ -1,0 +1,44 @@
+<div class="my-3 d-flex justify-content-between align-items-center">
+    <h1>Todos</h1>
+    <% if (currentUser.role==='admin' ) { %>
+        <a href="/todos/create" class="btn btn-primary " role="button">Attach Notification </a>
+        <% } %>
+</div>
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tartib</th>
+            <th scope="col">User</th>
+            <th scope="col">Rule</th>
+            <th class="col-2" scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% todos.forEach((todo, index)=> { %>
+            <tr>
+                <th scope="row">
+                    <%= index + 1 %>
+                </th>
+                <td>
+                    <%= todo.guide.title %>
+                </td>
+                <td>
+                    <%= `${todo.user.firstname} ${todo.user.lastName}` %>
+                </td>
+                <td>
+                    <%= todo.complete===true ? "I looked" : "I haven't looked yet" %>
+                </td>
+                <td class="d-flex gap-2">
+                    <a href="/todos/<%= todo.id %>" class="btn btn-outline-success" tabindex="-1" role="button"
+                        aria-disabled="true">View</a>
+                    <% if (currentUser.role==='admin' ) { %>
+                        <form action="/todos/<%= todo.id %>/delete" method="post">
+                            <button type="submit" class="btn btn-outline-danger">Delete</button>
+                        </form>
+                        <% } %>
+                </td>
+            </tr>
+            <% }) %>
+    </tbody>
+</table>

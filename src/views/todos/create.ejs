@@ -1,0 +1,33 @@
+<div class="my-3 d-flex justify-content-between align-items-center">
+    <h1>Notification</h1>
+</div>
+
+<div class="row justify-content-start">
+    <div class="col-md-6">
+        <form action="/todos/create" method="post">
+            <div class="mb-3">
+                <label><b>Whoes</b></label>
+                <select class="form-select" id="validationCustom04" name="user_id" required>
+                    <% users.forEach(user=> { %>
+                        <option value="<%= user.id %>">
+                            <%= `${user.firstname} ${user.lastName}` %>
+                        </option>
+                        <% }) %>
+                </select>
+            </div>
+            <div class="mb-2">
+                <label for="exampleFormControlTextarea1" class="form-label"><b>Which Title</b></label>
+                <select class="form-select" id="validationCustom04" name="guide_id" required>
+                    <% guides.forEach(guide=> { %>
+                        <option value="<%= guide.id %>">
+                            <%= guide.content %>
+                        </option>
+                        <% }) %>
+                </select>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

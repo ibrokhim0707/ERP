@@ -1,0 +1,38 @@
+[
+  {
+    "id": "e4dbb5c5-b8ba-4d30-a423-f54f636c61ea",
+    "firstname": "Ismoil",
+    "lastName": "Azizov",
+    "age": 16,
+    "role": "admin",
+    "username": "Ismoil",
+    "password": "$2a$08$w1ntSFInJa.AANFyyo1eteAr7Qj2Hv/ZNjIonXMRUgN3iXTNTV/S6"
+  },
+  {
+    "id": "bcc3d112-a8fb-4b91-807f-a56b81310a93",
+    "firstname": "Abdulloh",
+    "lastName": "Azizov",
+    "age": 17,
+    "role": "admin",
+    "username": "Abdulloh_01",
+    "password": "$2a$08$w1ntSFInJa.AANFyyo1eteAr7Qj2Hv/ZNjIonXMRUgN3iXTNTV/S6"
+  },
+  {
+    "id": "d5718fd1-8b7a-477e-aca7-97f0ac04d520",
+    "firstname": "John",
+    "lastName": "Doe",
+    "age": 21,
+    "role": "employee",
+    "username": "john",
+    "password": "$2a$08$w1ntSFInJa.AANFyyo1eteAr7Qj2Hv/ZNjIonXMRUgN3iXTNTV/S6"
+  },
+  {
+    "id": "f48f8192-0a04-4e7a-990d-cfb3dc78b0c8",
+    "firstname": "Janne",
+    "lastName": "Doe",
+    "age": 24,
+    "role": "admin",
+    "username": "janed",
+    "password": "$2a$08$w1ntSFInJa.AANFyyo1eteAr7Qj2Hv/ZNjIonXMRUgN3iXTNTV/S6"
+  }
+]

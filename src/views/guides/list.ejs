@@ -1,0 +1,45 @@
+<div class="my-3 d-flex justify-content-between align-items-center">
+    <h1>Guides</h1>
+    <% if (currentUser.role === 'admin') { %>
+    <a href="/guides/create" class="btn btn-primary " role="button">Create Guide</a>
+    <% } %>
+</div>
+
+<table class="table table-hover table-bordered"">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Content</th>
+            <th class="col-2" scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% guides.forEach((guide, index)=> { %>
+            <tr>
+                <th scope="row">
+                    <%= index + 1 %>
+                </th>
+                <td>
+                    <%= guide.title %>
+                </td>
+                <td>
+                    <%= guide.content %>
+                </td>
+                <td class="d-flex gap-2">
+                    <a href="/guides/<%= guide.id %>" class="btn btn-outline-success" tabindex="-1" role="button"
+                        aria-disabled="true">View</a>
+                    <% if (currentUser.role==='admin' ) { %>
+                        <a href="/guides/<%= guide.id %>/edit" class="btn btn-outline-warning" tabindex="-1"
+                            role="button" aria-disabled="true">Edit</a>
+                        <form action="/guides/<%= guide.id %>/delete" method="post">
+                            <button type="submit" class="btn btn-outline-danger">Delete</button>
+                        </form>
+
+                        <% } %>
+                </td>
+            </tr>
+            <% }) %>
+    </tbody>
+</table>
+</div>

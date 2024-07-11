@@ -1,0 +1,55 @@
+<div class="my-3 d-flex justify-content-between align-items-center">
+    <h1>Create User</h1>
+</div>
+
+<div class="row justify-content-start">
+    <div class="col-md-6">
+        <form action="/users/create" method="post">
+            <div class="form-row">
+                <div class="form-group mb-2">
+                    <label for="validationDefault01" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="validationDefault01" name="firstname" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="validationDefault02" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="validationDefault02" name="lastName" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="validationDefaultUsername" class="form-label">Username</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                        <input type="text" class="form-control" id="validationDefaultUsername"
+                            aria-describedby="inputGroupPrepend2" name="username" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group mb-2">
+                    <label for="validationDefault05" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="validationDefault05" name="age" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="validationDefault04" class="form-label">Role</label>
+                    <select class="form-select" id="validationDefault04" name="role" required>
+                        <option value="admin">Admin</option>
+                        <option value="employee">Employee</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group mb-2">
+                    <label for="inputPassword4" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" name="password">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group mb-2">
+                    <button class="btn btn-primary" type="submit">Create user</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
